@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     resources :ideas, only: [:index]
   end
   get '/users/:id', to: 'users#show', as: 'user_dashboard'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end
