@@ -1,0 +1,9 @@
+<h3>Welcome <%= current_user.username %></h3>
+<ul>
+  <li>Email Address: <%= current_user.email %></li>
+  <li>Joined: <%= current_user.join_date %></li>
+</ul>
+<%= link_to 'Edit Profile', edit_user_path(current_user) %>
+<h3>Most Current Ideas</h3>
+<h3>Most Popular Idea Categories</h3>
+<h3>Total Ideas: <%= current_user.idea_count %></h3>
